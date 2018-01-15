@@ -37,6 +37,47 @@ int IntSet:: lungime() // si asta de asemenea
 {
   return indice;
 }
+IntSet IntSet:: add(int x)
+{
+    IntSet aux(nr);
+    int i;
+    aux.v=v;
+    aux.indice=indice;
+    aux.nr=nr;
+
+    if(indice==nr)
+    {
+      cout<<"multime plina"<<'\n';
+      return aux;
+    }
+
+    else{
+       if(aux.contains(x) == true)
+       {
+          cout<<"elementul exista!";
+         return aux;
+       }
+
+        else {
+          aux.v[indice++]=x;
+
+           }
+         aux.indice=indice;
+          return aux;
+
+    }
+
+}
+bool IntSet:: contains(int x)
+{
+   int i;
+
+   for ( i=0 ; i<nr ; i++)
+    if( v[i] == x ) return true;
+
+    return false;
+}
+
 IntSet IntSet:: stergere(int x)
 {
     int i,j;
