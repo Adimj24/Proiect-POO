@@ -1,3 +1,24 @@
+
+Matrix Matrix:: operator +(Matrix b)
+{
+    int i,j;
+    Matrix suma;
+
+    //alocare dinamica matrice rezultat pe care o vom salva in campul privat de tip matrice din variabila de tip Matrix
+    float** ary = new float*[nr];
+    for(i = 0; i < nr ; i++)
+    ary[i] = new float[nr];
+
+    for( i=0;i<nr;i++)
+		for( j=0;j<nr;j++)
+			ary[i][j]=v[i][j]+b.v[i][j];
+
+    suma.nr=nr;
+    suma.v=ary;
+    return suma;
+}
+
+
 Matrix Matrix:: inmultire(Matrix b)
 {
     int i,j,k;
