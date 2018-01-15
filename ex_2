@@ -2,3 +2,34 @@
 
 using namespace std;
 
+
+
+
+IntSet IntSet:: stergere(int x)
+{
+    int i,j;
+    IntSet aux(nr);
+    aux.v=v;
+    aux.indice=indice;
+    aux.nr=nr;
+
+    if (aux.contains(x) == true)
+    {
+        for( i=0 ; i<indice ; i++ )
+          if( aux.v[i] == x )
+            {
+                for(j=i ; j<indice-1 ; j++)
+                    aux.v[j]=aux.v[j+1];
+                    aux.indice--;
+            }
+        cout<<"Element gasit!";
+    }
+
+
+     else
+     {
+         cout<<"elementul nu exista in multime!";
+     }
+     return aux;
+
+}
