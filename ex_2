@@ -52,7 +52,7 @@ IntSet IntSet:: add(int x) //adaugam elemente de tip int
     }
 
     else{
-       if(aux.contains(x) == true)      // verificam daca elementul exista deja
+       if(aux.contains(x) == true)      
        {
           cout<<"elementul exista!";
          return aux;
@@ -64,7 +64,7 @@ IntSet IntSet:: add(int x) //adaugam elemente de tip int
          aux.indice=indice;
           return aux;}
           }
-bool IntSet:: contains(int x)
+bool IntSet:: contains(int x)   // verificam daca elementul se gaseste deja in multime
 {
    int i;
     for ( i=0 ; i<nr ; i++)
