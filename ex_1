@@ -2,6 +2,67 @@
 
 using namespace std;
 
+class Matrix{
+
+private:
+
+    int nr;
+    float **v;
+
+public:
+
+    void initializare();
+    void afisare();
+    Matrix operator +(Matrix);
+    Matrix inmultire(Matrix);
+    Matrix putere(int);
+
+
+};
+
+void Matrix:: afisare()
+{
+    int i,j;
+
+    cout<<"Matricea rezultata:"<<'\n';
+
+       for( i=0 ; i<nr ; i++ )
+         {
+            for( j=0 ; j<nr ; j++ )
+                 cout<< v[i][j] <<"  ";
+            cout<< '\n';
+         }
+}
+
+void Matrix:: initializare()
+    {
+       int i,j,m,n;
+
+          cout<<"introduceti numarul de linii/coloane: "<<'\n';
+          cin>>m;
+          cin>>n;
+          if(m!=n)
+          {
+              cout<<"Matrice nepatratica!";
+              return;
+          }
+
+          nr=n;
+        //alocarea dinamica ptr matricea nou citita
+         float** ary = new float*[nr];
+         for(i = 0; i < nr ; i++)
+         ary[i] = new float[nr];
+
+        cout<<"introduceti valorile matricei de la tastura: "<<'\n';
+        //citirea valorilor de la tastatura
+         for( i=0 ; i<nr ; i++ )
+            for( j=0 ; j<nr ; j++ )
+              cin >> ary[i][j];
+
+        //initializarea matricei din partea privata cu cea citita de la tastatura
+          v=ary;
+}
+
 Matrix Matrix:: operator +(Matrix b)
 {
     int i,j;
