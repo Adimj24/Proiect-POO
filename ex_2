@@ -25,17 +25,17 @@ public:
 void IntSet:: afisare() // si asta
 {
     int i;
-    cout<<'\n'<<"Multimea: ";
+    cout<<'\n'<<"Multimea: "; // Afisam pe ecran ce se cere
 
     for (i=0 ; i<indice ; i++)
-        cout<<v[i]<<" ";
+        cout<<v[i]<<" "; // Se afiseaza multimea
 
-    cout<<'\n';
+    cout<<'\n';  // Dam Enter
 }
 
 int IntSet:: lungime() // si asta de asemenea
 {
-  return indice;
+  return indice; // Returnam lungimea
 }
 IntSet IntSet:: add(int x)
 {
