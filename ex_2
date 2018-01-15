@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class IntSet{ 
+class IntSet{ // asta am de luat de aici
 private:
 
    int *v,nr=0,indice=0;
@@ -28,16 +28,16 @@ void IntSet:: afisare() // si asta
     cout<<'\n'<<"Multimea: "; // Afisam pe ecran ce se cere
 
     for (i=0 ; i<indice ; i++)
-        cout<<v[i]<<" "; // Afisam multimea
+        cout<<v[i]<<" "; // Se afiseaza multimea
 
-    cout<<'\n'; // Dam Enter
+    cout<<'\n';  // Dam Enter
 }
 
-int IntSet:: lungime() 
+int IntSet:: lungime() // si asta de asemenea
 {
-  return indice; // Returnam lungimea prin variabila „indice”
+  return indice; // Returnam lungimea
 }
-IntSet IntSet:: add(int x)
+IntSet IntSet:: add(int x) //adaugam elemente de tip int
 {
     IntSet aux(nr);
     int i;
@@ -45,14 +45,14 @@ IntSet IntSet:: add(int x)
     aux.indice=indice;
     aux.nr=nr;
 
-    if(indice==nr)
+    if(indice==nr)          //verificam daca mai putem adauga elemente
     {
       cout<<"multime plina"<<'\n';
       return aux;
     }
 
     else{
-       if(aux.contains(x) == true)
+       if(aux.contains(x) == true)      // verificam daca elementul exista deja
        {
           cout<<"elementul exista!";
          return aux;
@@ -60,25 +60,19 @@ IntSet IntSet:: add(int x)
 
         else {
           aux.v[indice++]=x;
-
-           }
+              }
          aux.indice=indice;
-          return aux;
-
-    }
-
-}
+          return aux;}
+          }
 bool IntSet:: contains(int x)
 {
    int i;
-
-   for ( i=0 ; i<nr ; i++)
+    for ( i=0 ; i<nr ; i++)
     if( v[i] == x ) return true;
-
     return false;
 }
 
-IntSet IntSet:: stergere(int x) // dupa ce gaseste un element, acesta se sterge
+IntSet IntSet:: stergere(int x)
 {
     int i,j;
     IntSet aux(nr);
@@ -106,8 +100,7 @@ IntSet IntSet:: stergere(int x) // dupa ce gaseste un element, acesta se sterge
      return aux;
 
 }
-
-   int main()
+int main()
 {
     IntSet x(10);
     int i,nr,introd,sterg;
@@ -130,6 +123,8 @@ IntSet IntSet:: stergere(int x) // dupa ce gaseste un element, acesta se sterge
      x=x.stergere(sterg);
      cout<<'\n'<<"In urma stergerii: ";
      x.afisare();
-      return 0;
+
+
+    return 0;
 }
 
