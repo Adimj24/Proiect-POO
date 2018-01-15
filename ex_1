@@ -11,7 +11,7 @@ private:
 
 public:
 
-    void initializare();
+    void initializare(); //Metoda pt initializarea unei matrice
     void afisare();
     Matrix operator +(Matrix);
     Matrix inmultire(Matrix);
