@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+//clasa pentru a folosi operatii cu matrice
 class Matrix{
 
 private:
@@ -130,7 +130,8 @@ int main()
 {
         Matrix a,b,sum,prod,pow;
         int numar;
-
+	
+         //initializarea si crearea matricelor a si b
         a.initializare();
         a.afisare();
         b.initializare();
