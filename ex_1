@@ -109,3 +109,19 @@ Matrix Matrix:: inmultire(Matrix b)
     return prod;
 }
 
+Matrix Matrix:: putere(int n)
+{
+    Matrix pow,copie;
+    int i;
+
+    copie.v=v;
+
+    pow.v=v;
+    pow.nr=nr;
+
+    for(i=0 ; i<n-1 ; i++)
+        pow = pow.inmultire(copie);
+
+    return pow;
+}
+
