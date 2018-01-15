@@ -125,3 +125,32 @@ Matrix Matrix:: putere(int n)
     return pow;
 }
 
+
+int main()
+{
+        Matrix a,b,sum,prod,pow;
+        int numar;
+
+        a.initializare();
+        a.afisare();
+        b.initializare();
+        b.afisare();
+
+        //suma matricelor a si b
+        sum=a+b;
+        sum.afisare();
+
+        //produsul lui a cu b
+        prod=a.inmultire(b);
+        prod.afisare();
+
+        //ridicarea la puterea "numar" a matricei a
+        cout<<"Introduceti puterea la care doriti a ridica prima matrice:";
+        cin>>numar;
+        pow=a.putere(numar);
+        pow.afisare();
+
+
+    return 0;
+}
+
