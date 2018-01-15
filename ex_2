@@ -37,3 +37,59 @@ int IntSet:: lungime() // si asta de asemenea
 {
   return indice;
 }
+IntSet IntSet:: stergere(int x)
+{
+    int i,j;
+    IntSet aux(nr);
+    aux.v=v;
+    aux.indice=indice;
+    aux.nr=nr;
+
+    if (aux.contains(x) == true)
+    {
+        for( i=0 ; i<indice ; i++ )
+          if( aux.v[i] == x )
+            {
+                for(j=i ; j<indice-1 ; j++)
+                    aux.v[j]=aux.v[j+1];
+                    aux.indice--;
+            }
+        cout<<"Element gasit!";
+    }
+
+
+     else
+     {
+         cout<<"elementul nu exista in multime!";
+     }
+     return aux;
+
+}
+int main()
+{
+    IntSet x(10);
+    int i,nr,introd,sterg;
+
+    cout<<"Cate numere doriti a introduce?"<<'\n';
+    cin>>nr;
+
+
+    for(i=0 ; i<nr; i++)
+    {
+      cin>>introd;
+        x=x.add(introd);
+    }
+
+     x.afisare();
+
+     cout<<'\n'<<"Elementul de sters=  ";
+     cin>>sterg;
+
+     x=x.stergere(sterg);
+     cout<<'\n'<<"In urma stergerii: ";
+     x.afisare();
+
+
+    return 0;
+}
+
