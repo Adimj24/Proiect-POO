@@ -78,7 +78,7 @@ bool IntSet:: contains(int x)
     return false;
 }
 
-IntSet IntSet:: stergere(int x)
+IntSet IntSet:: stergere(int x) // dupa ce gaseste un element, acesta se sterge
 {
     int i,j;
     IntSet aux(nr);
