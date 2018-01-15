@@ -1,3 +1,6 @@
+#include <iostream>
+
+using namespace std;
 
 Matrix Matrix:: operator +(Matrix b)
 {
