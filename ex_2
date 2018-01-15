@@ -37,7 +37,7 @@ int IntSet:: lungime() // si asta de asemenea
 {
   return indice; // Returnam lungimea
 }
-IntSet IntSet:: add(int x) //adaugam elemente de tip int
+IntSet IntSet:: add(int x) //adaugam elemente de tip int in multime
 {
     IntSet aux(nr);
     int i;
@@ -45,7 +45,7 @@ IntSet IntSet:: add(int x) //adaugam elemente de tip int
     aux.indice=indice;
     aux.nr=nr;
 
-    if(indice==nr)          //verificam daca mai putem adauga elemente
+    if(indice==nr)    //verificam daca mai putem adauga elemente
     {
       cout<<"multime plina"<<'\n';
       return aux;
