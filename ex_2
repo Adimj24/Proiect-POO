@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class IntSet{ // asta am de luat de aici
+class IntSet{ 
 private:
 
    int *v,nr=0,indice=0;
@@ -25,17 +25,17 @@ public:
 void IntSet:: afisare() // si asta
 {
     int i;
-    cout<<'\n'<<"Multimea: "; // Afisam pe ecran ce se cere
+    cout<<'\n'<<"Multimea: ";
 
     for (i=0 ; i<indice ; i++)
-        cout<<v[i]<<" "; // Se afiseaza multimea
+        cout<<v[i]<<" ";
 
-    cout<<'\n';  // Dam Enter
+    cout<<'\n';
 }
 
-int IntSet:: lungime() // si asta de asemenea
+int IntSet:: lungime() 
 {
-  return indice; // Returnam lungimea
+  return indice;
 }
 IntSet IntSet:: add(int x)
 {
@@ -106,7 +106,8 @@ IntSet IntSet:: stergere(int x)
      return aux;
 
 }
-int main()
+
+   int main()
 {
     IntSet x(10);
     int i,nr,introd,sterg;
@@ -129,8 +130,6 @@ int main()
      x=x.stergere(sterg);
      cout<<'\n'<<"In urma stergerii: ";
      x.afisare();
-
-
-    return 0;
+      return 0;
 }
 
