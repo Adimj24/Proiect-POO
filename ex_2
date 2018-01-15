@@ -91,14 +91,11 @@ IntSet IntSet:: stergere(int x)
             }
         cout<<"Element gasit!";
     }
-
-
      else
      {
-         cout<<"elementul nu exista in multime!";
+         cout<<"Elementul nu exista in multime!";
      }
      return aux;
-
 }
 int main()
 {
