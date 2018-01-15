@@ -2,34 +2,38 @@
 
 using namespace std;
 
+class IntSet{ // asta am de luat de aici
+private:
 
+   int *v,nr=0,indice=0;
 
+public:
 
-IntSet IntSet:: stergere(int x)
-{
-    int i,j;
-    IntSet aux(nr);
-    aux.v=v;
-    aux.indice=indice;
-    aux.nr=nr;
-
-    if (aux.contains(x) == true)
+    IntSet(int dim)
     {
-        for( i=0 ; i<indice ; i++ )
-          if( aux.v[i] == x )
-            {
-                for(j=i ; j<indice-1 ; j++)
-                    aux.v[j]=aux.v[j+1];
-                    aux.indice--;
-            }
-        cout<<"Element gasit!";
+        nr=dim;
+        v = new int[dim];
     }
 
+    bool contains(int);
+    IntSet stergere(int);
+    IntSet add(int);
+    int lungime();
+    void afisare();
 
-     else
-     {
-         cout<<"elementul nu exista in multime!";
-     }
-     return aux;
+};
+void IntSet:: afisare() // si asta
+{
+    int i;
+    cout<<'\n'<<"Multimea: ";
 
+    for (i=0 ; i<indice ; i++)
+        cout<<v[i]<<" ";
+
+    cout<<'\n';
+}
+
+int IntSet:: lungime() // si asta de asemenea
+{
+  return indice;
 }
