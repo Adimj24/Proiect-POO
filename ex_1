@@ -12,7 +12,7 @@ private:
 public:
 
     void initializare(); //Metoda pt initializarea unei matrice
-    void afisare();
+    void afisare();     //Metoda pt afisarea unei matrice
     Matrix operator +(Matrix);
     Matrix inmultire(Matrix);
     Matrix putere(int);
