@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-//clasa pentru a folosi operatii cu matrice
+
 class Matrix{
 
 private:
@@ -88,12 +88,12 @@ Matrix Matrix:: inmultire(Matrix b)
     int i,j,k;
     Matrix prod;
 
-   //alocam dinamic matricea rezultat ce contine inmultirea celor 2 matrice
+   //se face alocarea dinamica pentru matricea rezultat (matricea ce contine rezultatul inmultirii celor 2 matrice)
     float** ary = new float*[nr];
     for(i = 0; i < nr ; i++)
     ary[i] = new float[nr];
 
-    //initializam toate elem cu 0
+    // se initializeaza toate elementele cu 0
     for (i=0 ; i<nr ; i++)
       for (j=0 ; j<nr ; j++)
       ary[i][j]=0;
@@ -130,8 +130,7 @@ int main()
 {
         Matrix a,b,sum,prod,pow;
         int numar;
-	
-         //initializarea si crearea matricelor a si b
+
         a.initializare();
         a.afisare();
         b.initializare();
